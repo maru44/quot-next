@@ -239,3 +239,76 @@ margin padding
 .pl100 {
   padding-left: 100px;
 }
+
+/******** btn **********/
+button {
+  display: block;
+  width: 240px;
+  height: 40px;
+}
+
+/******* flex ********/
+
+.flexCen {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex1 {
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.flexNormal {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.spBw {
+  justify-content: space-between;
+}
+.jsCen {
+  justify-content: center;
+}
+.stretch {
+  justify-content: stretch;
+}
+.spEv {
+  justify-content: space-evenly;
+}
+
+.alCen {
+  align-items: center;
+}
+.alFlBot {
+  align-items: flex-end;
+}
+
+.flexCol {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+/*******  header  ********/
+header {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+header > div {
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+}

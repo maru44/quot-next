@@ -1,5 +1,5 @@
 import { GetServerSideProps, NextPage } from "next";
-import { TQuotation } from "../types/any";
+import { TQuotation } from "../../types/any";
 import { baseUrl } from "../../utils/utils";
 import { fetchAddQuotation } from "../../helper/Operation";
 

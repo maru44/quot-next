@@ -19,3 +19,13 @@ export type CounterResponse = {
   Status: string;
   Data: TCounter[];
 };
+
+/****  props  ****/
+export type THead = {
+  title?: string;
+  ogtypeWebsite?: string;
+  ogimage?: string;
+  ogtitle?: string;
+  ogdescription?: string;
+  seodescription?: string;
+};

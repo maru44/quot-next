@@ -22,7 +22,7 @@
         "hooks/**/*",
         "state/**/*",
         "types/**/*",
-        "helper/**/*",
+        "helper/**/*", "types",
     ],
     "exclude": ["node_modules"],
 }
