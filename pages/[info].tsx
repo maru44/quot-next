@@ -51,6 +51,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (ctx) => {
       Status: ret.Status,
       Data: ret.Data,
     },
+    revalidate: 1,
   };
 };
 
