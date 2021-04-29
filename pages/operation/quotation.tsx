@@ -1,7 +1,12 @@
 import { GetServerSideProps, NextPage } from "next";
 import { TQuotation } from "../../types/any";
 import { baseUrl } from "../../utils/utils";
-import { fetchAddQuotation } from "../../helper/Operation";
+import {
+  fetchAddQuotation,
+  fetchDeleteTable,
+  fetchDelteQuotation,
+} from "../../helper/Operation";
+import { useState } from "react";
 
 interface Props {
   quots: TQuotation[];
@@ -9,6 +14,7 @@ interface Props {
 
 const Quotations: NextPage<Props> = (props) => {
   const initialQuots = props.quots;
+  const [quots, setQuot] = useState(initialQuots);
 
   const postQuot = async (e: any) => {
     e.preventDefault();
@@ -19,12 +25,24 @@ const Quotations: NextPage<Props> = (props) => {
     );
   };
 
+  const deleteQ = async (e: any) => {
+    const ret = await fetchDelteQuotation(e.target.value);
+  };
+
   return (
     <div className="content mla mra">
-      {initialQuots &&
-        initialQuots.map((quot, index) => (
+      {quots &&
+        quots.map((quot, index) => (
           <div key={index}>
-            {quot.Category} {quot.Number} {quot.Slug} {quot.Content}
+            {quot.Category} {quot.Number} {quot.Content}
+            <button
+              className="ml40 mt10"
+              onClick={deleteQ}
+              value={quot.Slug}
+              type="button"
+            >
+              delete
+            </button>
           </div>
         ))}
       <div className="mt60">

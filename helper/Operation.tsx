@@ -51,3 +51,11 @@ export const fetchAddQuotation = async (category: string, content: string) => {
 
   return ret;
 };
+
+export const fetchDelteQuotation = async (slug: string) => {
+  const res = await fetch(`${baseUrl}/quotation/delete/?s=${slug}`);
+  const ret = await res.json();
+  console.log(ret);
+
+  return ret;
+};

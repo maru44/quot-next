@@ -241,7 +241,7 @@ margin padding
 }
 
 /******** btn **********/
-button {
+.kujiButton {
   display: block;
   width: 240px;
   height: 40px;

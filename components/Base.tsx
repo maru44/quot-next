@@ -17,7 +17,7 @@ const Base: NextPage = () => {
       <div className="">
         <h3>ボタンゾーン</h3>
         <div className="mt20 flexCen">
-          <button className="" onClick={kujibiki} value="good">
+          <button className="kujiButton" onClick={kujibiki} value="good">
             GOOD
           </button>
         </div>
